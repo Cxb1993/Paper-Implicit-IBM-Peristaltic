@@ -1,0 +1,73 @@
+Resolution Study
+________________
+
+W=1 X=.25 dt=.00025 N=256..2048
+Plot max stress against time, each line for a different resolution
+Plot mean flow against N, each line for a different value of T (do both styles for both mean flow and max stress?)
+
+slope for flow vs N = -1.47955633813
+slope for sup_s vs N = -1.80025518241
+
+X=.8, W=5
+_________
+
+slope = 5286.80406717
+
+Blowup. Uncleare why.
+
+At a sufficiently low resolution the simulation is stable (N=256 and below, T = 50, maybe more),
+at both dt = .00025 * (2048.0 / N)
+and dt = .5 * .00025 * (2048.0 / N)
+
+Need dt = .00025 * (2048.0 / N) for higher rez sims to get more stability, but sim still explodes
+	For N=1024 the final time step is 7.44
+
+Show succession of plots for N=1024
+Discuss
+	Point out boundary layer
+	Initial super thin peak for T < 2, dissipates due to artificial diffusion?
+
+Look at first period of pump over all resolutions (resolution study):
+	???
+	???
+
+
+
+Full Jaffrin, All W, All X
+__________________________
+
+Show succession of plots for X=.5 and a range of W
+Discuss
+	Show complex structure, show it dissipates, why?
+	Contrast with lack of structure for lower W, also compare vorticity against Stokes
+
+Show succession of plots for W=50 over time, show dissipation
+Discuss
+	Aritifical dissipation responsible?
+	Compare to upwinding
+
+Show succession of plots for W=50 and a range of X
+Discuss
+	For small X nothing interesting happens
+
+Graph how long the sims remain stable (X vs T), each line corresponds to a different W
+
+Graph MeanFlow versus X, multiple lines for different W
+	Multiple graphs for different points in time
+
+!!!! redo sim
+
+
+
+Jaffrin
+_______
+
+Plot curve for all X. All rho? Note that the discrepancy does not appear to be due to non-zero Reynolds number
+
+
+
+Centered vs Artificial Diffusion vs ENO3
+________________________________________
+
+Compare plots for W=0,5,55
+Note similar but stronger artificial diffusion for upwinding
